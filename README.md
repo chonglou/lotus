@@ -1,7 +1,8 @@
-lotus PHP部署从此不再痛苦
+lotus--让PHP部署从此不再痛苦
 =====
 
 ### 功能
+ * 支持CentOS系统（其它系统如有需求可以添加）
  * 支持多台主机
  * 支持nginx设置
  * 支持php安装配置
@@ -21,12 +22,15 @@ lotus PHP部署从此不再痛苦
 	
 
 ### 配置
-	cp config/lotus.yml.tmp config/lotus.yml
-	vi config/lotus.yml
+ENV是运行环境：如staging production等在config目录下 以production为例
+	cp config/deploy/production.rb.tmp config/deploy/production.rb
+	vi config/deploy/production.rb #设置服务器连接
+	cp config/deploy.rb.tmp config/deploy.rb
+	vi config/deploy.rb # 设置git信息
 
 ### 运行
 	cap -T # 列出所有任务
-	cap test # 测试连接
-	cap deploy # 部署
-	cap rollback # 回滚
+	cap ENV test # 测试连接
+	cap ENV deploy # 部署
+	cap ENV rollback # 回滚
 	

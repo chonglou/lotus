@@ -1,2 +1,0 @@
-role :web, %w{deploy@example1.com deploy@example2.com}
-role :db,  %w{deploy@example1.com deploy@example2.com}

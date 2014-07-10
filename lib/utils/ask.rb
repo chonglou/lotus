@@ -5,7 +5,6 @@ def y_n(question)
 end
 
 def which(question, options)
-
   ask("#{question}?(#{options.join '/'}) ") { |q| q.default=options.first }
 end
 

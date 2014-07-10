@@ -8,4 +8,5 @@ class MultiLogger
     @targets.each {|t| t.send method, *args, &block }
   end
 end
+
 $logger = MultiLogger.new Logger.new("#{File.dirname __FILE__}/../../tmp/lotus.log", 'daily'), Logger.new(STDOUT)

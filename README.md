@@ -22,7 +22,6 @@ lotus--让PHP部署从此不再痛苦
 	
 
 ### 配置
-ENV是运行环境：如staging production等在config目录下 以production为例
 	cp config/lotus.yml.tmp config/lotus.yml
 	vi config/lotus.yml #
 
